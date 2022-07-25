@@ -27,17 +27,20 @@ public class MyStepCambiar {
     @When("yo quiero iniciar el login y cambiar Clave")
     public void yoQuieroIniciarElLoginYCambiarClave(Map<String,String> credential)
     {
+        //INICIAR SESSION
         mainPage.loginButton.click();
         loginModal.emailTextBox.writeText(credential.get("email"));
         loginModal.passwordTextBox.writeText(credential.get("password"));
         loginModal.loginButton.click();
 
+        // CAMBIAR DE CLAVE
         updateModal.settingButton.click();
         updateModal.claveActualTextBox.writeText(credential.get("password"));
         updateModal.claveNuevaTextBox.writeText(credential.get("newpassword"));
         updateModal.okButton.click();
         updateModal.cerrarButton.click();
 
+        //VOLVER A INICIAR SESSION
         mainPage.loginButton.click();
         loginModal.emailTextBox.writeText(credential.get("email"));
         loginModal.passwordTextBox.writeText(credential.get("newpassword"));
