@@ -31,7 +31,7 @@ public class CrearCuentaTest {
     {
         mainPage.crearButton.click();
         crearModal.nombreTextBox.writeText("PRUEBAS");
-        crearModal.emailTextBox.writeText("alvarod2@gmail.com");
+        crearModal.emailTextBox.writeText("alvarod3@gmail.com");
         crearModal.passwordTextBox.writeText("123456");
         crearModal.confirmarButton.click();
         crearModal.guardarButton.click();
