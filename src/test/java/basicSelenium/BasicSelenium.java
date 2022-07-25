@@ -21,7 +21,7 @@ public class BasicSelenium {
     {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         //pagina a testear
         driver.get("http://todo.ly/");
